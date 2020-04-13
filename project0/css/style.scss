@@ -1,0 +1,98 @@
+div {
+    ol {
+      font-weight: bold;
+    }
+    ul {
+      font-weight: lighter;
+    }
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+    th {
+        background-color: lightgray;
+    }
+    td {
+        font-weight: lighter;
+    }
+}
+
+%message {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.middle {
+    @extend %message;
+    text-align: center;
+    
+}
+
+.left {
+    @extend %message;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.screen-only {
+    @extend %message;
+    text-align: center;
+}
+
+@media print {
+    .screen-only {
+        display: none;
+    }
+}
+
+$colour: white;
+.fa {
+    @extend %message;
+    font-size: 50px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: $colour;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: $colour;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: $colour;
+}
+.fa-instagram {
+  background: #125688;
+  color: $colour;
+}
+.fa-skype {
+  background: #00aff0;
+  color: $colour;
+}
